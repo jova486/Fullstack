@@ -24,7 +24,7 @@ const Part = ({ name, exercises }) => {
 const Total = ({ parts }) => {
   let sum = 0;
   for (let i = 0; i < parts.length; i++) {
-    sum += parts[i].exercises; // Add each part's exercises to the total
+    sum += parts[i].exercises; 
   }
   return <p>Number of exercises {sum}</p>;
 };
