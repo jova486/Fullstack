@@ -1,10 +1,12 @@
-const Persons = ({ persons }) => (
-    <ul>
-      {persons.map((person, index) => (
-        <li key={index}>
+const Persons = ({ persons, handleDelete }) => (
+    <div>
+      {persons.map((person) => (
+        <p key={person.id}>
           {person.name} {person.number}
-        </li>
+          <button onClick={() => handleDelete(person.id, person.name)}>Poista</button>
+        </p>
       ))}
-    </ul>
+    </div>
   );
+
   export default Persons;
