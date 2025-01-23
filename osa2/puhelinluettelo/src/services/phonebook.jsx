@@ -11,7 +11,7 @@ const create = (newObject) => {
 };
 
 const update = (id, updatedObject) => {
-  return axios.put(`${baseUrl}/${id}`, updatedObject).then(response => response.data);
+    return axios.put(`${baseUrl}/${id}`, updatedObject).then((response) => response.data);
 };
 
 const deletePerson = (id) => {
