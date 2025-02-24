@@ -6,7 +6,7 @@ const App = () => {
   const [countries, setCountries] = useState([]);
   const [filter, setFilter] = useState('');
 
-  // Hae maiden tiedot REST API:sta
+  // maiden tiedot REST API:sta
   useEffect(() => {
     axios.get('https://studies.cs.helsinki.fi/restcountries/api/all')
       .then(response => {
@@ -21,7 +21,7 @@ const App = () => {
     setFilter(event.target.value.toLowerCase());
   };
 
-  // Suodata maat hakuehdon perusteella
+  // filter
   const filteredCountries = countries.filter(country =>
     country.name.common.toLowerCase().includes(filter)
   );
